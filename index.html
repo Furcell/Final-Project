@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Food Made With love" />
+    <meta name="keywords" content="Food, food-delivery, Burger" />
+    <meta name="author" content="Lasha Purtseladze" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FB META -->
+    <meta property="og:url" content="furcell.github.io/Final-Project/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Food Made With Love" />
+    <meta property="og:description" content="Best Delivery Food" />
+    <meta
+      property="og:image"
+      content="https://media.istockphoto.com/id/1307190527/photo/happy-waiter-serving-food-to-group-of-friends-in-a-pub.jpg?s=612x612&w=0&k=20&c=EDqQ0oBcpFGV25p61vWUF5N-6lRJdbmZmQMe5kyuxyA="
+    />
+    <title>Final-Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- splidejs -->
+    <link
+      href="
+      https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+      "
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Css/reset.css" />
+    <link rel="stylesheet" href="Css/style.css" />
+    <link rel="stylesheet" href="Css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><i class="fas fa-utensils"></i>Food</a>
+
+      <div class="burger" id="burger-bar">
+        <div class="top-brg"></div>
+        <div class="middle-brg"></div>
+        <div class="bottom-brg"></div>
+      </div>
+
+      <nav class="navigation" id="nav-bar">
+        <ul class="ul-element">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#speciality">Speciality</a></li>
+          <li><a href="#popular">Popular</a></li>
+          <li><a href="#review">Review</a></li>
+          <li><a href="#order">Order</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home" id="home">
+        <h1><span>F</span>ood Made With Love</h1>
+        <p>Everything tastes better when it's made with love!</p>
+        <a href="#" class="btn" id="alert-element">Join Us</a>
+        <a href="#" class="btn" id="loginBtn">Login</a>
+
+        <form action="#" id="login1" class="hidden-form">
+          <div class="formDiv">
+            <label for="user">Username</label>
+            <input type="text" name="username" id="user" />
+            <button id="showFilter">Show Filter</button>
+            <ul id="result" class="user-ul-list"></ul>
+            <input type="checkbox" name="check" id="save" />
+            <span style="font-size: 1.5rem">save</span>
+          </div>
+          <div class="formDiv">
+            <label for="passw1">Password</label>
+            <input type="password" id="passw1" name="passwfield1" />
+          </div>
+          <button>Submit</button>
+        </form>
+        <a href="#" class="btn" id="joinUs">Registration</a>
+
+        <div class="Validation" id="formContainer" style="display: none">
+          <form action="#" id="login" class="form-el" method="post">
+            <div class="form-div">
+              <label for="usernamefield">Username</label>
+              <input type="text" name="username" id="usernamefield" />
+              <p class="error-text" id="error-username"></p>
+            </div>
+
+            <div class="form-div">
+              <label for="passwordfield">Password</label>
+              <input type="password" name="passw" id="passwordfield" />
+              <i class="fa-solid fa-eye iconPassw" id="icon"></i>
+              <p class="error-text" id="error-passw"></p>
+            </div>
+
+            <div class="form-div">
+              <label for="passwordfield2">Repeat Password</label>
+              <input type="password" name="passw2" id="passwordfield2" />
+              <p class="error-text" id="error-passw2"></p>
+            </div>
+
+            <div class="form-div">
+              <label for="emailField">Email</label>
+              <input type="email" id="emailField" name="email" />
+              <p class="error-email" id="errorEmail"></p>
+            </div>
+
+            <div class="form-div">
+              <input type="radio" name="gender" class="genderinput" />
+              <label for="Male">Male</label>
+              <input type="radio" name="gender" class="genderinput" />
+              <label for="Female">Female</label>
+              <p class="error-text" id="error-gender"></p>
+            </div>
+            <div class="form-div">
+              <input type="checkbox" name="agree" id="check" />
+              <label for="check"
+                >I agree to the <a href="#terms">Terms and Conditions</a></label
+              >
+              <p class="error-text" id="error-agree"></p>
+            </div>
+            <button type="reset">Reset</button>
+            <button type="submit">Registration</button>
+          </form>
+        </div>
+
+
+        <div id="cookieBanner" class="cookie-banner">
+          <p>
+            This website uses cookies to ensure you get the best experience on
+            our website. By continuing to use this site, you accept our use of
+            cookies. <a href="#" id="cookieConsent">Learn more</a>
+          </p>
+          <button id="acceptCookies">Accept</button>
+          <button id="declineCookies">Decline</button>
+        </div>
+
+      
+        <div id="cookieModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cookie Policy</h2>
+            <p>Explanation of cookie policy...</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="speciality" id="speciality">
+        <h2 class="title">Our <span>Speciality</span></h2>
+
+        <div class="box-container">
+          <div class="box">
+            <img
+              class="image img1"
+              src="Images/burger-tasty.jpg"
+              alt="burger-tasty"
+            />
+            <img class="image img2" src="Images/burger2.jpg" alt="burger2" />
+
+            <div class="content1">
+              <h3>Burger</h3>
+              <a href="#" class="btn">Menu</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <img
+              class="image img1"
+              src="Images/pizza-tasty.jpg"
+              alt="pizza-tasty"
+            />
+            <img class="image img2" src="Images/pizza2.jpg" alt="pizza2" />
+            <div class="content1">
+              <h3>Pizza</h3>
+              <a href="#" class="btn">Menu</a>
+            </div>
+          </div>
+          <div class="box">
+            <img
+              class="image img1"
+              src="Images/ice-cream.jpg"
+              alt="ice-cream"
+            />
+            <img class="image img2" src="Images/ice2.jpg" alt="ice2" />
+            <div class="content1">
+              <h3>Ice-Cream</h3>
+
+              <a href="#" class="btn">Menu</a>
+            </div>
+          </div>
+          <div class="box">
+            <img
+              class="image img1"
+              src="Images/cold-drinks.jpg"
+              alt="cold-drinks"
+            />
+            <img class="image img2" src="Images/drinks2.jpg" alt="drinks2" />
+            <div class="content1">
+              <h3>Drinks</h3>
+
+              <a href="#" class="btn">Menu</a>
+            </div>
+          </div>
+          <div class="box">
+            <img
+              class="image img1"
+              src="Images/sweets.jpg"
+              alt="Tasty-Sweets"
+            />
+            <img class="image img2" src="Images/sweets2.jpg" alt="sweets2" />
+            <div class="content1">
+              <h3>Sweets</h3>
+
+              <a href="#" class="btn">Menu</a>
+            </div>
+          </div>
+          <div class="box">
+            <img
+              class="image img1"
+              src="Images/Breakfast.jpg"
+              alt="Healhty-Breakfast"
+            />
+            <img
+              class="image img2"
+              src="Images/breakfast2.jpg"
+              alt="Breakfast2"
+            />
+            <div class="content1">
+              <h3>Breakfast</h3>
+              <a href="#" class="btn">Menu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="popular"
+        class="splide"
+        aria-label="Splide Basic HTML Example"
+      >
+        <h2 class="title">Most <span>Popular</span></h2>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <svg
+              height="512px"
+              id="Layer_1"
+              style="enable-background: new 0 0 512 512"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="512px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M184.7,413.1l2.1-1.8l156.5-136c5.3-4.6,8.6-11.5,8.6-19.2c0-7.7-3.4-14.6-8.6-19.2L187.1,101l-2.6-2.3  C182,97,179,96,175.8,96c-8.7,0-15.8,7.4-15.8,16.6h0v286.8h0c0,9.2,7.1,16.6,15.8,16.6C179.1,416,182.2,414.9,184.7,413.1z"
+              />
+            </svg>
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <svg
+              height="512px"
+              id="Layer_2"
+              style="enable-background: new 0 0 512 512"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="512px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M184.7,413.1l2.1-1.8l156.5-136c5.3-4.6,8.6-11.5,8.6-19.2c0-7.7-3.4-14.6-8.6-19.2L187.1,101l-2.6-2.3  C182,97,179,96,175.8,96c-8.7,0-15.8,7.4-15.8,16.6h0v286.8h0c0,9.2,7.1,16.6,15.8,16.6C179.1,416,182.2,414.9,184.7,413.1z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="splide__track">
+          <div class="splide__list">
+            <div class="splide__slide">
+              <span class="Price">5$ - $20</span>
+              <img
+                src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg"
+                alt="Burger"
+              />
+              <h3>cheese burger</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <a href="#order" class="btn">Order Now</a>
+              </div>
+            </div>
+
+            <div class="splide__slide">
+              <span class="Price">5$ - $25</span>
+              <img
+                src="https://i.insider.com/5b4e5b2642e1cc0fbc78bc53?width=600&format=jpeg&auto=webp"
+                alt="Pizza"
+              />
+              <h3>Pineapple Pizza</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <a href="#order" class="btn">Order Now</a>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <span class="Price">10$ - $35</span>
+              <img
+                src="https://www.tasteofhome.com/wp-content/uploads/2019/01/medium-rare-steak-shutterstock_706040446.jpg?fit=1024,683"
+                alt="Steak"
+              />
+              <h3>Steak</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <a href="#order" class="btn">Order Now</a>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <span class="Price">5$ - $15</span>
+              <img src="Images/pop-breakfast.jpg" alt="pop-breakfast" />
+              <h3>Healthy Breakfast</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <a href="#order" class="btn">Order Now</a>
+              </div>
+            </div>
+
+            <div class="splide__slide">
+              <span class="Price">10$ - $30</span>
+              <img
+                src="https://glebekitchen.com/wp-content/uploads/2017/04/tonkotsuramenfront.jpg"
+                alt="Ramen"
+              />
+              <h3>Ramen</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <a href="#order" class="btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="steps-section">
+        <div class="steps-box">
+          <img src="Images/steps_1.png" alt="choose-food" />
+          <h3>Choose Your Favorite Food</h3>
+        </div>
+        <div class="steps-box">
+          <img src="Images/steps_2.png" alt="food-delivery" />
+          <h3>Free And Fast Delivery</h3>
+        </div>
+        <div class="steps-box">
+          <img src="Images/steps_3.png" alt="food_payment" />
+          <h3>Easy Payments Methods</h3>
+        </div>
+        <div class="steps-box">
+          <img src="Images/steps_4.png" alt="Enjoy_food" />
+          <h3>Enjoy Your Food</h3>
+        </div>
+      </section>
+
+      <section class="review-section" id="review">
+        <h2 class="title">Customers <span>Review</span></h2>
+
+        <div class="review-container">
+          <div class="review-box">
+            <img src="Images/face1.jpg" alt="face1" />
+            <h4>Jhon Deo</h4>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p>You have amazing food, we will definitely visit you again.</p>
+          </div>
+
+          <div class="review-box">
+            <img src="Images/face2.jpg" alt="face2" />
+            <h4>Theo Randall</h4>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p>It is the coolest place in the city, thank you very much.</p>
+          </div>
+          <div class="review-box">
+            <img src="Images/face3.jpg" alt="face3" />
+            <h4>Roberta Hall</h4>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p>I really liked everything, especially the cheeseburger.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="order-section" id="order">
+        <h2 class="title">Order<span>Now</span></h2>
+        <div class="row">
+          <div class="order-img">
+            <img src="Images/delivery.jpg" alt="order-img1" />
+          </div>
+          <form id="orderForm" action="#">
+            <div class="inputbox">
+              <input type="text" placeholder="Name" id="nameInput">
+              <input type="tel" placeholder="Mobile Number" id="mobileInput">
+            </div>
+            <textarea placeholder="Your Message" id="messageInput"></textarea>
+            <input type="button" value="Order now" class="btn" id="orderButton">
+          </form>
+          
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="contact-section" id="contact">
+        <h2 class="title">Contact <span>Us</span></h2>
+
+        <div class="accordion contact-accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Customer Support</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>
+                If you have any questions or need assistance, feel free to reach
+                out to our customer support team.
+              </p>
+              <ul>
+                <li>Email: support@fooddelivery.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Business Inquiries</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>
+                For business partnerships or inquiries, please contact our
+                business development team.
+              </p>
+              <ul>
+                <li>Email: business@fooddelivery.com</li>
+                <li>Phone: +1 (123) 456-7895</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="social">
+          <a href="https://www.facebook.com/" target="_blank" class="btn"
+            >Facebook</a
+          >
+          <a href="https://twitter.com/" target="_blank" class="btn">Twitter</a>
+          <a href="https://www.instagram.com/" target="_blank" class="btn"
+            >Instagram</a
+          >
+          <a href="https://www.linkedin.com/" target="_blank" class="btn"
+            >Linkedin</a
+          >
+        </div>
+        <button id="scrollToTopBtn" title="Go to top">Go to Top</button>
+      </section>
+    </footer>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="./node_modules/js-cookie/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script type="module" src="Js/script.js"></script>
+  </body>
+</html>

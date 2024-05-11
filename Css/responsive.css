@@ -1,0 +1,109 @@
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Header */
+@media (max-width:1000px){
+    header{
+        padding: 2rem;
+    }
+}
+@media (max-width:900px){
+    #burger-bar{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation.activeNav{
+        display: block;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background-color: white;
+        border-top: 3px solid rgba(165, 18, 18, 0.1);
+        background: url(../Images/plate-waffles.jpg) no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+    .navigation a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: 1px solid rgba(165, 18, 18, 0.1);
+        border-left:2px solid var(--red);       
+    }
+    .ul-element{
+        display: block;
+    }
+}
+
+/* Speciality Section */
+@media (max-width:800px){
+    .box-container{
+       -ms-grid-columns: 1fr 1fr;
+       grid-template-columns: 1fr 1fr;
+    }
+    .speciality h2{
+        font-size: 2rem;
+     }
+}
+@media (max-width:500px){
+    .box-container{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+     }
+}
+
+/* Steps Section */
+@media (max-width:800px){
+    .steps-section{
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:400px){
+    .steps-section{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+/* Review Section */
+@media (max-width:800px){
+    .review-container{
+        -ms-grid-columns: 1fr ;
+        grid-template-columns: 1fr ;
+    }
+}
+
+
+
+/* Order Section */
+@media (max-width:400px){
+    .inputbox {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        
+    }
+    .inputbox input{
+        width: 100%;
+        height: 2.5rem;
+    }
+    .row textarea{
+        height: 5rem;
+    }
+}
